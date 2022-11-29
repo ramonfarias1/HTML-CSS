@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes and Pseudo-Elements with Links</title>
+    <style>
+        /* Custom Selectors:
+        #  = id
+        .  = class
+        :  = pseudo-class
+        :: = pseudo-element
+        >  = children
+        */
+
+        a:link {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: blueviolet;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:active {
+            background-color: #F5C800;
+        }
+
+        .special {
+            background-color: yellow;
+        }
+
+        .special::after {
+            content: '[link] \2190';
+        }
+
+        .special::before {
+            content: '\2192'
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Pseudo-classes and Pseudo-elements with Links</h1>
+    <ul>
+        <li><a href="https://github.com/Nomartsu" target="_blank" rel="External" class="special">Github Repository</a></li>
+        <li><a href="https://youtube.com/c/RamonPlaysRumo100" target="_blank" rel="External">My Youtube Channel</a></li>
+        <li><a href="https://cursoemvideo.com" target="_blank" rel="External" class="special">Curso em Vídeo</a></li>
+    </ul>
+</body>
+</html>

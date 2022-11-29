@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Images and Audios</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Dynamic Images and Audios</h1>
+    <h2>Dynamic Images</h2>
+    <picture>
+        <source media="(max-width: 750px)" srcset="images/image-s.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="images/image-m.png" type="image/png">
+        <img src="images/image-b.png" alt="Dynamic Image">
+    </picture>
+    <h2>Audio</h2>
+    <audio preload="auto" controls loop> <!-- autoplay -->
+        <source src="audios/Swimming Lessons - Bail Bonds.mp3" type="audio/mpeg">
+        <source src="audios/Swimming Lessons - Bail Bonds (online-audio-converter.com).ogg" type="audio/ogg">
+        <source src="audios/Swimming Lessons - Bail Bonds (online-audio-converter.com).wav" type="audio/wav">
+        <p>your browser does not support this audio <a href="audios/Swimming Lessons - Bail Bonds.mp3" download="Swimming Lessons - Bail Bonds.mp3" type="audio/mpeg">click here for download</a></p>
+    </audio>
+</body>
+</html>

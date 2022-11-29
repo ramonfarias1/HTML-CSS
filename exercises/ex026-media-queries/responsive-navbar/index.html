@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive NavBar</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body onresize="forceMenu()">
+    <header>
+        <h1>Responsive NavBar</h1>
+        <span class="material-symbols-outlined" id="menuIcon" onclick="showMenu()">menu</span>
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Option 1</a></li>
+                <li><a href="#">Option 2</a></li>
+                <li><a href="#">Option 3</a></li>
+                <li><a href="#">Option 4</a></li>
+                <li><a href="#">Option 5</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Testing Media Query</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, corporis eos a maiores pariatur voluptas voluptatum, ad debitis sint dolores assumenda neque maxime voluptatem rem necessitatibus inventore quibusdam ducimus amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sed similique vero quis, quaerat ipsam? Consequuntur expedita aliquid, doloremque delectus maxime voluptate officia doloribus ab culpa, beatae iste nulla odio.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem commodi, quibusdam illo earum officiis nihil recusandae quos possimus beatae eaque ea sapiente minima voluptates omnis harum odit pariatur ratione ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, voluptate fuga consequatur quam aperiam facilis placeat blanditiis quae possimus itaque dolore qui odit esse nisi sed consectetur? Veritatis, sint numquam.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae commodi odit fugiat omnis, libero magnam. Tempore molestias impedit quae, distinctio labore voluptatum fugiat dolorem neque accusantium cupiditate commodi sunt soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque esse est architecto labore! Laborum eveniet blanditiis ipsam quam ipsa eos reiciendis. Eveniet aliquam consequatur odio porro et quos veritatis provident.</p>
+        </article>
+    </main>
+    <footer>
+        <p>Copyright Example 2022</p>
+    </footer>
+    <script>
+        function forceMenu(){
+            if (window.innerWidth >= 576) {
+                menu.style.display = 'block'
+            } else {
+                menu.style.display = 'none'
+            }
+        }
+
+        function showMenu() {
+            if (menu.style.display == 'block') {
+                menu.style.display = 'none'
+            } else {
+                menu.style.display = 'block'
+            }
+        }
+    </script>
+</body>
+</html>

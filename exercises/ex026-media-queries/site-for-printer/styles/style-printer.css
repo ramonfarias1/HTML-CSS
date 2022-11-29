@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/* style for printers */
+
+nav {
+    display: none;
+}
+
+main {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: justify;
+    line-height: 1.5em;
+    text-indent: 30px;
+}
+
+main::after {
+    content: 'This article was printed from website https://example.com'
+}
+
+footer {
+    display: none;
+}

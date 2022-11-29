@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input:number; input:date; input:month; input:time; step; value; min and max</title>
+</head>
+<body>
+    <form action="registration.jar" method="get" autocomplete="on">
+        <p>
+            <label for="input-name">Name:</label>
+            <input type="text" name="input-name" id="input-name" autocomplete="name" required minlength="2">
+        </p>
+        <p>
+            <label for="input-grade">Grade:</label>
+            <input type="number" name="input-grade" id="input-grade" required autocomplete="off" min="0" max="10" step="0.1" placeholder="0 to 10">
+        </p>
+        <p>
+            <label for="input-testdate">Test Date:</label>
+            <input type="date" name="input-testdate" id="input-testdate" required value="2022-11-03" min="2022-01-01" max="2022-12-31">
+        </p>
+        <p>
+            <label for="input-testmonth">Test Month:</label>
+            <input type="month" name="input-testmonth" id="input-testmonth" value="2022-11" required min="2022-01" max="2022-12">
+        </p>
+        <p>
+            <label for="input-gradetime">Grade Time:</label>
+            <input type="time" name="input-gradetime" id="input-gradetime" required>
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clean">
+        </p>
+    </form>
+</body>
+</html>

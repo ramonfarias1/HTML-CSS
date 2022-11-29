@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select, datalist and textarea</title>
+</head>
+<body>
+    <form action="example.jar" method="post">
+        <p>
+            <label for="states">States: </label>
+            <select name="states" id="states">
+                <option value="" selected>--- Choice ---</option>
+                <optgroup label="North Region">
+                    <option value="AM">Amazonas</option>
+                    <option value="RR">Roraima</option>
+                    <option value="PA">Pará</option>
+                </optgroup>
+                <optgroup label="North East Region">
+                    <option value="MA">Maranhão</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="SE">Sergipe</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="profession">Profession:</label>
+            <input type="text" name="profession" id="profession" list="profession-list">
+            <datalist id="profession-list">
+                <option value="Developer"></option>
+                <option value="Data Scientist"></option>
+                <option value="Pentester"></option>
+                <option value="Doctor"></option>
+                <option value="Designer"></option>
+            </datalist>
+        </p>
+        <p>
+            <label for="comments">Comments: </label> <br>
+            <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Without Spoilers"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear">
+        </p>
+    </form>
+</body>
+</html>

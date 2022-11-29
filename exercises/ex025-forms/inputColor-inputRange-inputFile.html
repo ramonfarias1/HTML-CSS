@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input:color, input:range and input:File</title>
+</head>
+<body>
+    <form action="example.jar" method="post">
+        <fieldset>
+            <legend>Form Example</legend>
+            <p>
+                <label for="input-color">Select a Color:</label>
+                <input type="color" name="input-color" id="input-color">
+            </p>
+            <p>
+                <label for="input-satisfaction">Satisfaction Level:</label>
+                <input type="range" name="input-satisfaction" id="input-satisfaction" min="0" max="10" value="0">
+            </p>
+            <p>
+                <label for="input-profilephoto">Select your profile photo:</label>
+                <input type="file" name="input-profilephoto" id="input-profilephoto">
+            </p>
+            <p>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>

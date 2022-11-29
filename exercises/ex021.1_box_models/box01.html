@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        h1 {
+            background-color: blue;
+            color: white;
+            height: 37px;
+            width: 428.453px;
+            border: 20px solid green;
+            padding: 50px 10px;
+            margin: 21.44px auto 50px auto; /* margin: auto; center horizontally */
+            outline: 5px dashed red;
+        }
+
+        a {
+            display: inline-block; /* <a> default value: inline */
+            background-color: blue;
+            color: white;
+            border-width: 10px;
+            border-style: solid;
+            border-color: green;
+            padding-top: 20px;
+            padding-right: 10px;
+            padding-bottom: 20px;
+            padding-left: 10px;
+            margin-top: 0px;
+            margin-right: 50px;
+            margin-bottom: 0px;
+            margin-left: 50px;
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>&lt;h1&gt; is an example of box-level</h1>
+    <p>Paragraphs are also an example of box-level, but the <a href="#">links are examples of inline-level boxes</a> let's see how it all works.</p>
+</body>
+</html>

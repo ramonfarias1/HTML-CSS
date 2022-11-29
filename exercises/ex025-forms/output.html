@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+</head>
+<body>
+    <h1>Output</h1>
+    <form action="example.jar" method="get" autocomplete="on">
+        <p>
+            <label for="in1">Number 1: </label>
+            <input type="number" name="in1" id="in1" required min="0" max="9999999" oninput="osum.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="in2">Number 2: </label>
+            <input type="number" name="in2" id="in2" required min="0" max="9999999" oninput="osum.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="osum">Sum: </label>
+            <output name="osum" id="osum">0</output>
+        </p>
+        <p>
+            <label for="irange">Satisfaction Level: </label>
+            <input type="range" name="irange" id="irange" min="0" max="10" value="5" required oninput="orange.innerHTML = irange.value">
+            <output name="orange" id="orange">5</output>
+        </p>
+        <p>
+            <label for="ibirthyear">Year of Birth: </label>
+            <input type="number" name="ibirthyear" id="ibirthyear" min="1900" max="" required oninput="oage.innerHTML = calcAge()">
+        </p>
+        <p>
+            <label for="oage">Age: </label>
+            <output name="oage" id="oage" for="ibirthyear"></output>
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear">
+        </p>
+    </form>
+    <script>
+        let currentyear = new Date().getFullYear()
+        let birthyear = document.getElementById('ibirthyear')
+        birthyear.setAttribute('max', currentyear)
+        function calcAge() {
+            let age = Number(currentyear) - Number(birthyear.value)
+            return age
+        }
+    </script>
+</body>
+</html>

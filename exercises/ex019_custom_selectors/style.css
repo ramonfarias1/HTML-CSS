@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/*
+id in html = # in css (can only single id for each element.)
+class in html = . in css (can multiple classes for each element.)
+
+note 1: can use id and class together in the same tag
+note 2: a tag can have several classes, just separate the name of one class from another using space, inside the same class parameter
+*/
+
+body{
+    color: white;
+    background-color: #0c020f;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#main {
+    background-color: #15101a;
+    text-align: center;
+}
+
+#html5 {
+    color: orange;
+}
+
+#css3 {
+    color: blue;
+}
+
+p {
+    text-align: justify;
+    text-indent: 40px;
+}
+
+.basic {
+    color: green;
+}
+
+.intermediary {
+    color: yellow;
+}
+
+.advanced {
+    color: red;
+}
+
+.emphasis {
+    background-color: gray;
+    font-weight: bold;
+}

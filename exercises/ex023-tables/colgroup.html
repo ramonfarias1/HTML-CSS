@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colgroup</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        td, th, caption {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        /* 
+        Alternating Colors:
+
+        colgroup col:nth-child(odd){
+            background-color: gray;
+        }
+        */
+
+        col.cgroup {
+            background-color: lightblue;
+        }
+
+        col.gender {
+            background-color: lightcoral;
+        }
+
+        col.profession {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col span="2" class="cgroup">
+            <col class="gender">
+            <col class="profession">
+        </colgroup>
+        <caption>Registration</caption>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Profession</th>
+        </tr>
+        <tr>
+            <td>Seras Victoria</td>
+            <td>22</td>
+            <td>Female</td>
+            <td>Monster Hunter</td>
+        </tr>
+        <tr>
+            <td>Abraham Van Hellsing</td>
+            <td>35</td>
+            <td>Male</td>
+            <td>Monster Hunter</td>
+        </tr>
+        <tr>
+            <td>David Martinez</td>
+            <td>20</td>
+            <td>Male</td>
+            <td>Mercenary</td>
+        </tr>
+        <tr>
+            <td>Gatts</td>
+            <td>25</td>
+            <td>Male</td>
+            <td>Sufferer</td>
+        </tr>
+    </table>
+</body>
+</html>

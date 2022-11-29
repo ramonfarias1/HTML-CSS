@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        table {
+            width: 500px;
+            height: 500px;
+            border-collapse: collapse;
+        }
+
+        tr.colored {
+            background-color: gray;
+        }
+
+        td {
+            padding: 5px;
+            border: 1px solid black;
+            text-align: center; /* Horizontal Align */
+            vertical-align: middle; /* Vertical Align */
+        }
+
+        td.number {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tables</h1>
+    <!-- 
+        Table Hierarchy (simple)
+            table
+                tr = table row
+                    th = table header
+                    td = table data
+    -->
+    <table>
+        <tr class="colored"> <!-- Fist Line -->
+            <td>A1</td>
+            <td>B1</td>
+            <td class="number">C1</td>
+        </tr>
+        <tr> <!-- Second Line -->
+            <td>A2</td>
+            <td>B2</td>
+            <td class="number">C2</td>
+        </tr>
+        <tr class="colored"> <!-- Third Line -->
+            <td>A3</td>
+            <td>B3</td>
+            <td class="number">C3</td>
+        </tr>
+        <tr> <!-- Fourth Line -->
+            <td>A4</td>
+            <td>B4</td>
+            <td class="number">C4</td>
+        </tr>
+    </table>
+</body>
+</html>

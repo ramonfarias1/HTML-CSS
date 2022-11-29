@@ -1,0 +1,27 @@
+Sites:
+
+Adobe Colors      - https://color.adobe.com/
+
+Coolors           - https://coolors.co/
+
+Paletton          - https://paletton.com/
+
+What Font Is      - https://www.whatfontis.com/
+
+What the Font     - https://www.myfonts.com/pages/whatthefont
+
+MockFlow          - https://mockflow.com/
+
+QR Code Generator - www.qr-code-generator.com
+
+Google Fonts / Icons - fonts.google.com
+
+Extensions:
+
+ColorZilla     - https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?utm_source=chrome-ntp-icon
+
+WhatFont       - https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?utm_source=chrome-ntp-icon
+
+Web Developer  - https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?utm_source=chrome-ntp-icon
+
+Window Resizer - https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh?utm_source=chrome-ntp-icon

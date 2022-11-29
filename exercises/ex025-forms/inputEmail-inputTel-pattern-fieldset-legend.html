@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input:email; input:tel; pattern; fieldset; legend</title>
+</head>
+<body>
+    <form action="registration.jar" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Personal Data</legend>
+            <p>
+                <label for="input-name">Name:</label>
+                <input type="text" name="input-name" id="input-name" required autocomplete="name" minlength="2">
+            </p>
+            <p>
+                <label for="input-email">Email:</label>
+                <input type="email" name="input-email" id="input-email" required autocomplete="email" placeholder="example@example.com">
+            </p>
+            <p>
+                <label for="input-tel">Telephone / Cell Phone:</label>
+                <input type="tel" name="input-tel" id="input-tel" required autocomplete="tel" placeholder="(00) 00000-0000" pattern="\(\d{2}\)[0-9]{4,5}-[0-9]{4}">
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clean">
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        div {
+            display: inline-block;
+            padding: 50px;
+            background-color: yellow;
+            border: 1px solid black;
+        }
+
+        .rotate {
+            transform: rotate(20deg);
+        }
+
+        .skew {
+            transform: skew(20deg);
+        }
+
+        .scale {
+            transform: scale(70%);
+        }
+
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: blue;
+        }
+
+        .translate {
+            padding: 0;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>transform</h1>
+    <h2>transform: rotate(20deg):</h2>
+    <div class="rotate">Hello World!</div>
+    <h2>transform: skew(20deg):</h2>
+    <div class="skew">Hello World!</div>
+    <h2>transform: scale(70%):</h2>
+    <div class="scale">Hello World!</div>
+    <h2>transform: translate(x, y):</h2>
+    <div class="container">
+        <div class="translate"></div>
+    </div>
+</body>
+</html>

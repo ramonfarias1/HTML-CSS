@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 800px;
+        }
+
+        caption {
+            border: 1px solid black;
+            border-bottom: none;
+            font-weight: bold;
+            font-size: 1.5em;
+            padding: 10px;
+        }
+
+        td, th {
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Favorite Films</caption>
+        <thead>
+            <tr>
+                <th scope="col">Group</th>
+                <th scope="col">Name</th>
+                <th scope="colgroup" colspan="3">Films</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="rowgroup" rowspan="3">Women</th>
+                <td>Lucyna Kushinada</td>
+                <td>Blade Runner 2049</td>
+                <td>Matrix</td>
+                <td>Player Number One</td>
+            </tr>
+            <tr>
+                <td>Akira Oono</td>
+                <td>Detona Ralph</td>
+                <td>Pixels</td>
+                <td>Free Guy</td>
+            </tr>
+            <tr>
+                <td>Rias Gremory</td>
+                <td>The Fault In Our Stars</td>
+                <td>Avengers: Endgame</td>
+                <td>Back to The Future</td>
+            </tr>
+            <tr>
+                <th scope="rowgroup" rowspan="3">Men</th>
+                <td>David Martinez</td>
+                <td>Ghost in The Shell</td>
+                <td>Tron</td>
+                <td>RoboCop</td>
+            </tr>
+            <tr>
+                <td>Haruo Yaguchi</td>
+                <td>Warcraft</td>
+                <td>Mortal Kombat</td>
+                <td>Street Fighter II The Movie</td>
+            </tr>
+            <tr>
+                <td>Issei Hyoudou</td>
+                <td>Terminator</td>
+                <td>Avengers: Infinity War</td>
+                <td>Joker</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

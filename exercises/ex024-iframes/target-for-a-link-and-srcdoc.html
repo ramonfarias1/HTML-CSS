@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe: target for a link and SRCDOC</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iframe: target for a link and SRCDOC</h1>
+    <p>click a link below to open in iframe &downarrow;</p>
+    <ul>
+        <li><a href="pages/table.html" target="iframe">Page 01</a></li>
+        <li><a href="pages/page02.html" target="iframe">Page 02</a></li>
+        <li><a href="pages/page03.html" target="iframe">Page 03</a></li>
+    </ul>
+    <iframe srcdoc="
+    <h1>Welcome to Main Page!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quod error veniam sed corporis est fugiat quis ea omnis rem saepe enim numquam nihil, ex esse praesentium reprehenderit. Pariatur, non?</p>
+    <img src='images/ramon-logo.png' alt='ramon logo'>
+    " name="iframe">ERROR, your browser is incompatible with iframes.</iframe>
+</body>
+</html>
