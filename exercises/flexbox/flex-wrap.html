@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap</title>
+    <style>
+        section.flexContainer {
+            display: flex;
+            width: 300px;
+            background-color: cadetblue;
+        }
+
+        section#nowrap {
+            flex-wrap: nowrap;
+        }
+
+        section#wrap {
+            flex-wrap: wrap;
+        }
+
+        section#wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+
+        div.flexItem {
+            margin: 10px;
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Wrap</h1>
+    <h2>flex-wrap: nowrap;</h2>
+    <section class="flexContainer" id="nowrap">
+        <div class="flexItem" id="flexItem01">
+            Item01
+        </div>
+        <div class="flexItem" id="flexItem02">
+            Item02
+        </div>
+        <div class="flexItem" id="flexItem03">
+            Item03
+        </div>
+        <div class="flexItem" id="flexItem04">
+            Item04
+        </div>
+        <div class="flexItem" id="flexItem05">
+            Item05
+        </div>
+        <div class="flexItem" id="flexItem06">
+            Item06
+        </div>
+    </section>
+    <h2>flex-wrap: wrap;</h2>
+    <section class="flexContainer" id="wrap">
+        <div class="flexItem" id="flexItem01">
+            Item01
+        </div>
+        <div class="flexItem" id="flexItem02">
+            Item02
+        </div>
+        <div class="flexItem" id="flexItem03">
+            Item03
+        </div>
+        <div class="flexItem" id="flexItem04">
+            Item04
+        </div>
+        <div class="flexItem" id="flexItem05">
+            Item05
+        </div>
+        <div class="flexItem" id="flexItem06">
+            Item06
+        </div>
+    </section>
+    <h2>flex-wrap: wrap-reverse;</h2>
+    <section class="flexContainer" id="wrap-reverse">
+        <div class="flexItem" id="flexItem01">
+            Item01
+        </div>
+        <div class="flexItem" id="flexItem02">
+            Item02
+        </div>
+        <div class="flexItem" id="flexItem03">
+            Item03
+        </div>
+        <div class="flexItem" id="flexItem04">
+            Item04
+        </div>
+        <div class="flexItem" id="flexItem05">
+            Item05
+        </div>
+        <div class="flexItem" id="flexItem06">
+            Item06
+        </div>
+    </section>
+</body>
+</html>
