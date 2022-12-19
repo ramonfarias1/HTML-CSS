@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>writing-mode property</title>
+    <style>
+        span#vertical {
+            writing-mode: vertical-rl;
+        }
+
+        p#vertical {
+            writing-mode: vertical-rl;
+        }
+    </style>
+</head>
+<body>
+    <h1>writing-mode property</h1>
+    <p>Some text with default writing-mode.</p>
+    <p>Some text with a span element with a <span id="vertical">vertical-rl</span> writing-mode</p>
+    <p id="vertical">Some text with writing-mode: vertical-rl.</p>
+</body>
+</html>
