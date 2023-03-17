@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-items</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .flex-container {
+            display: flex;
+            width: 400px;
+            height: 360px;
+            background-color: tomato;
+            border: 4px solid black;
+        }
+
+        .item {
+            background-color: cadetblue;
+            border: 3px solid black;
+            padding: 20px;
+            margin: 10px;
+            font: 2em bold;
+            text-align: center;
+        }
+
+        #item2 {
+            font-size: 3em;
+        }
+
+        #item3 {
+            font-size: 4em;
+        }
+
+        p {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .stretch {
+            align-items: stretch;
+        }
+
+        .flex-start {
+            align-items: flex-start;
+        }
+
+        .flex-end {
+            align-items: flex-end;
+        }
+
+        .center {
+            align-items: center;
+        }
+
+        .baseline {
+            align-items: baseline;
+        }
+    </style>
+</head>
+<body>
+    <h1>align-items</h1>
+    <p> Alinda de acordo com o eixo transversal</p>
+    <p>funcionar melhor quando se tem apenas uma linha ou uma coluna</p>
+    <p>flex-direction: row;</p>
+    <p>stretch</p>
+    <section class="flex-container stretch">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+    </section>
+    <p>flex-start</p>
+    <section class="flex-container flex-start">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+    </section>
+    <p>flex-end</p>
+    <section class="flex-container flex-end">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+    </section>
+    <p>center</p>
+    <section class="flex-container center">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+    </section>
+    <p>baseline</p>
+    <section class="flex-container baseline">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+    </section>
+    <p>flex-direction: column;</p>
+    <p>stretch</p>
+    <section class="flex-container stretch column">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+    </section>
+    <p>flex-start</p>
+    <section class="flex-container flex-start column">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+    </section>
+    <p>flex-end</p>
+    <section class="flex-container flex-end column">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+    </section>
+    <p>center</p>
+    <section class="flex-container center column">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+    </section>
+    <p>baseline</p>
+    <section class="flex-container baseline column">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2baseline">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+    </section>
+</body>
+</html>
