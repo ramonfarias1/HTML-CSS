@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .flex-container {
+            display: flex;
+            width: 1000px;
+            background-color: tomato;
+            border: 4px solid black;
+        }
+
+        .item {
+            background-color: cadetblue;
+            border: 3px solid black;
+            padding: 20px;
+            margin: 10px;
+            font: 2em bold;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flex1 {
+            flex: 1;
+        }
+
+        .flex2 {
+            flex: 2;
+        }
+
+        .flex {
+            flex: 3 2 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>flex</h1>
+    <p>Atalho para as propriedades flex-grow, flex-shrink e flex-basis. Geralmente você verá a propriedade flex nos flex itens ao invés de cada um dos valores separados.</p>
+    <p>Para melhor consistência entre os browsers, é recomendado utilizar a propriedade flex ao invés de cada propriedade separada.</p>
+    <p><strong>flex: 0 1 auto;</strong> (default. se você não definir nenhum valor de flex ou para as outras propriedades separadas, o normal será flex-grow: 0, flex-shrink: 1 e flex-basis: auto.)</p>
+    <section class="flex-container">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+    </section>
+    <p><strong>flex: 1;</strong> (Define flex-grow: 1; flex-shrink: 1; e flex-basis: 0;)</p>
+    <section class="flex-container">
+        <div class="item flex1" id="item1">
+            1 test test
+        </div>
+        <div class="item flex1" id="item2">
+            2 teeeeeeeest
+        </div>
+        <div class="item flex1" id="item3">
+            3 super test mega test test
+        </div>
+    </section>
+    <p><strong>flex: 2;</strong> (Define flex-grow: 2; flex-shrink: 1; e flex-basis: 0;)</p>
+    <section class="flex-container">
+        <div class="item flex2" id="item1">
+            1 test test
+        </div>
+        <div class="item flex2" id="item2">
+            2 teeeeeeeest
+        </div>
+        <div class="item flex2" id="item3">
+            3 super test mega test test
+        </div>
+    </section>
+    <p><strong>Misturado;</strong> (flex: 1; para o item 1. flex: 2; para o item 2. e flex: 3 2 300px; para o ultimo item.)</p>
+    <section class="flex-container">
+        <div class="item flex1" id="item1">
+            1 test test
+        </div>
+        <div class="item flex2" id="item2">
+            2 teeeeeeeest
+        </div>
+        <div class="item flex" id="item3">
+            3 super test mega test test
+        </div>
+    </section>
+</body>
+</html>
