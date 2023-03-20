@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-basis</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .flex-container {
+            display: flex;
+            width: 900px;
+            background-color: tomato;
+            border: 4px solid black;
+        }
+
+        .item {
+            background-color: cadetblue;
+            border: 3px solid black;
+            
+            margin: 10px;
+            font: 2em bold;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        .basisAuto {
+            flex-basis: auto;
+        }
+
+        .basis0 {
+            flex-basis: 0;
+        }
+
+        .basis {
+            flex-basis: 200px;
+        }
+
+        .grow1 {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>flex-basis</h1>
+    <p>Define a largura ou altura (dependendo do eixo principal) inicial do item antes do espaço disponível ser distribuído.</p>
+    <p>flex-basis: auto; (default. O tamanho inicial será igual ao tamanho do item.)</p>
+    <section class="flex-container">
+        <div class="item basisAuto" id="item1">
+            conteúdo
+        </div>
+        <div class="item basisAuto" id="item2">
+            conteúdo largo
+        </div>
+        <div class="item basisAuto" id="item3">
+            conteúdo muito largo
+        </div>
+    </section>
+    <p>flex-basis: 0; | flex-grow: 0; (Mantem o item selecionado com a mesma largura do seu antecessor. Nesse caso o selecionado é o "conteúdo largo" e seu antecessor é o "conteúdo".)</p>
+    <section class="flex-container">
+        <div class="item" id="item4">
+            conteúdo
+        </div>
+        <div class="item basis0" id="item5">
+            conteúdo largo
+        </div>
+        <div class="item" id="item6">
+            conteúdo muito largo
+        </div>
+    </section>
+    <p>flex-basis: 0; | flex-grow: 1; (Deixa todos os items da mesma largura, mas, obedecendo o conteúdo que é maior.)</p>
+    <section class="flex-container">
+        <div class="item grow1 basis0" id="item4">
+            conteúdo
+        </div>
+        <div class="item grow1 basis0" id="item5">
+            conteúdo largo
+        </div>
+        <div class="item grow1 basis0" id="item6">
+            conteúdo muito largo
+        </div>
+        <div class="item grow1 basis0" id="item6">
+            conteúdo muito largoooooooooooooooooooooooo
+        </div>
+    </section>
+    <p>flex-basis: px | % | em | etc; | flex-grow: 0; (Aumenta o tamanho inicial do item selecionado. No caso, o Item 2)</p>
+    <section class="flex-container">
+        <div class="item" id="item4">
+            1
+        </div>
+        <div class="item basis" id="item5">
+            2
+        </div>
+        <div class="item" id="item6">
+            3
+        </div>
+    </section>
+    <p>flex-basis: px | % | em | etc; | flex-grow: 1;</p>
+    <section class="flex-container">
+        <div class="item grow1" id="item4">
+            1
+        </div>
+        <div class="item grow1 basis" id="item5">
+            2
+        </div>
+        <div class="item grow1" id="item6">
+            3
+        </div>
+    </section>
+</body>
+</html>
