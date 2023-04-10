@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-template-columns</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            background-color: tomato;
+            border: 4px solid black;
+        }
+
+        .item {
+            background-color: cadetblue;
+            border: 3px solid black;
+            padding: 20px;
+            margin: 10px;
+            font: 2em bold;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .columns100 {
+            grid-template-columns: 100px;
+        }
+
+        .columns100100 {
+            grid-template-columns: 100px 100px;
+        }
+
+        .columnsfr {
+            grid-template-columns: 1fr 2fr;
+        }
+
+        .columns-minmax {
+            grid-template-columns: minmax(500px, 1fr) 1fr;
+        }
+
+        .repeat {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .repeat-minmax {
+            grid-template-columns: repeat(3, minmax(200px, 1fr));
+        }
+
+        .repeat-auto-fit {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .repeat-auto-fill {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+    </style>
+</head>
+<body>
+    <h1>grid-template-columns</h1>
+    <p>grid-template-columns: 100px; (uma coluna de 100px de largura)</p>
+    <section class="container columns100">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+    </section>
+    <p>grid-template-columns: 100px 100px; (duas colunas de 100px de largura)</p>
+    <section class="container columns100100">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+    </section>
+    <p>grid-template-columns: 100px 100px (valores em PX são fixos por isso não respeitam o conteúdo);</p>
+    <section class="container columns100100">
+        <div class="item" id="item1">
+            conteúdo
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            conteúdoGrande
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+    </section>
+    <p>grid-template-columns: 1fr 2fr; (duas colunas sendo a segunda com o dobro do tamanho da primeira)</p>
+    <section class="container columnsfr">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+    </section>
+    <p>grid-template-columns: 1fr 2fr; (respeitando o tamanho do conteúdo)</p>
+    <section class="container columnsfr">
+        <div class="item" id="item1">
+            conteúdoSuperMegaHiperblasterSupremoGigantissimoRespeita
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            ConteúdoMuitoGrande
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+    </section>
+    <p>grid-template-columns: minmax(500px, 1fr) 1fr;</p>
+    <p>(Duas colunas são criadas, a primeira terá no mínimo 500px de largura e no máximo 1fr(isso significa que após 500px ela se expande da mesma forma que a outra coluna))</p>
+    <section class="container columns-minmax">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+    </section>
+    <p>grid-template-columns: minmax(500px, 1fr) 1fr;</p>
+    <p>A primeira coluna não respeita o conteúdo pois TEM valor mínimo definido. A segunda respeita pois NÃO TEM valor mínimo definido.</p>
+    <section class="container columns-minmax">
+        <div class="item" id="item1">
+            conteúdoSuperMegaHiperblasterSupremoGigantissimoRespeita
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            conteúdoSuperMegaHiperblasterSupremoGigantissimoRespeita
+        </div>
+    </section>
+    <p>grid-template-columns: repeat(3, 1fr);</p>
+    <p>Cria 3 colunas com 1fr de tamanho. O repeat seria a mesma coisa que escrever 1fr 1fr 1fr.</p>
+    <section class="container repeat">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+    </section>
+    <p>grid-template-columns: repeat(3, minmax(200px, 1fr));</p>
+    <p>Cria 3 colunas com tamanho mínimo de 200px e máximo de 1fr</p>
+    <section class="container repeat-minmax">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            conteúdoSuperMegaHiperblasterSupremoGigantissimoRespeita
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            conteúdoSuperMegaHiperblasterSupremoGigantissimoRespeita
+        </div>
+    </section>
+    <p>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))</p>
+    <p>O auto-fit tenta colocar quantas colunas der, expandindo os itens para caber no espaço disponível do container.</p>
+    <section class="container repeat-auto-fit">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+    </section>
+    <p>grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))</p>
+    <p>O auto-fill coloca quantas colunas der no espaço do container, mas não expande os itens para preencher todo o container.</p>
+    <section class="container repeat-auto-fill">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+    </section>
+</body>
+</html>

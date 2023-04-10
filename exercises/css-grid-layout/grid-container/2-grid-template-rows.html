@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-template-rows</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            width: 600px;
+            background-color: tomato;
+            border: 4px solid black;
+        }
+
+        .item {
+            background-color: cadetblue;
+            border: 3px solid black;
+            margin: 10px;
+            padding: 5px;
+            font: 1.5em bold;
+        }
+
+        p {
+            font-size: 1.1em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .columns {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .columns2 {
+            grid-template-columns: 2fr 3fr 1fr;
+        }
+
+        .rows1 {
+            grid-template-rows: 150px 80px 150px;
+        }
+
+        .rows2 {
+            grid-template-rows: 150px 100px;
+        }
+
+        .rows3 {
+            grid-template-rows: 100px 200px auto;
+        }
+
+        .rows-fr {
+            grid-template-rows: 1fr 2fr;
+        }
+    </style>
+</head>
+<body>
+    <h1>grid-template-rows</h1>
+    <p>Pode utilizar os mesmos valores do grid-template-columns nessa propriedade também.</p>
+    <p>grid-template-rows: 150px 100px 150px;</p>
+    <p>Cria 3 linhas no grid, sendo a primeira com 150px, segunda 100px e a terceira 80px. Caso o grid necessite de mais linhas, elas terão o tamanho de acordo com o conteúdo.</p>
+    <section class="container columns rows1">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+        <div class="item" id="item6">
+            6
+        </div>
+    </section>
+    <p>grid-template-rows: 150px 100px;</p>
+    <section class="container columns rows2">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+        <div class="item" id="item6">
+            6
+        </div>
+    </section>
+    <p>grid-template-rows: 1fr 2fr;</p>
+    <p>Cria 2 linhas no grid, sendo a segunda com cerca de duas vezes o tamanho da primeira</p>
+    <section class="container columns rows-fr">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+        <div class="item" id="item6">
+            6
+        </div>
+    </section>
+    <p>grid-template-columns / grid-template-rows</p>
+    <section class="container columns2 rows3">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+        <div class="item" id="item6">
+            6
+        </div>
+        <div class="item" id="item7">
+            7
+        </div>
+        <div class="item" id="item8">
+            8
+        </div>
+    </section>
+</body>
+</html>
