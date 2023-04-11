@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gap</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            width: 500px;
+            height: 500px;
+            background-color: tomato;
+            border: 1px solid black;
+        }
+
+        p {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .gap {
+            grid-template-areas: 
+                "header header header"
+                "nav nav nav"
+                "aside main main"
+                "footer footer footer";
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 10% 5% auto 20%;
+            gap: 16px;
+        }
+
+        .row-gap {
+            grid-template-areas: 
+                "header header header"
+                "nav nav nav"
+                "aside main main"
+                "footer footer footer";
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 10% 5% auto 20%;
+            row-gap: 2rem;
+        }
+
+        .column-gap {
+            grid-template-areas: 
+                "header header header"
+                "nav nav nav"
+                "aside main main"
+                "footer footer footer";
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 10% 5% auto 20%;
+            column-gap: 0.5rem;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        header, nav, aside, main, footer {
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>gap</h1>
+    <p>Define o espaçamento entre os elementos do grid.</p>
+    <p>gap: 16px;</p>
+    <section class="container gap">
+        <header>
+            Header
+        </header>
+        <nav>
+            Nav
+        </nav>
+        <aside>
+            Aside
+        </aside>
+        <main>
+            Main
+        </main>
+        <footer>
+            Footer
+        </footer>
+    </section>
+    <p>row-gap: 2rem;</p>
+    <section class="container row-gap">
+        <header>
+            Header
+        </header>
+        <nav>
+            Nav
+        </nav>
+        <aside>
+            Aside
+        </aside>
+        <main>
+            Main
+        </main>
+        <footer>
+            Footer
+        </footer>
+    </section>
+    <p>column-gap: 0.5rem;</p>
+    <section class="container column-gap">
+        <header>
+            Header
+        </header>
+        <nav>
+            Nav
+        </nav>
+        <aside>
+            Aside
+        </aside>
+        <main>
+            Main
+        </main>
+        <footer>
+            Footer
+        </footer>
+    </section>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-template shorthand</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            width: 500px;
+            height: 500px;
+            background-color: tomato;
+            border: 1px solid black;
+        }
+
+        p {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .area01 {
+            grid-template: 
+                "header header header"  10%
+                "nav    nav    nav"     5%
+                "aside  main   main"    auto
+                "footer footer footer"  20%
+
+                /auto   auto   auto;
+
+            gap: 1rem;
+        }
+
+        .area02 {
+            grid-template: 
+                "aside header header"  max-content
+                "aside nav    ad"      max-content
+                "aside main   ad"      auto
+                "aside footer ad"      max-content
+
+                /1fr   2fr    1fr;
+
+            gap: 1rem;
+        }
+
+        .mobile {
+            grid-template: 
+                "header"   1fr
+                "nav"      1fr
+                "main"     5fr
+                "aside"    2fr
+                "ad"       2fr
+                "footer"   1fr
+                
+                /auto;
+
+            gap: 1rem;
+        }
+
+        .vazio {
+            grid-template: 
+                ".     header  ."  2fr
+                "aside nav    ad"  1fr
+                "aside main   ad"  6fr
+                ".     footer  ."  2fr
+                
+                /1fr   2fr    1fr;
+
+            gap: 1rem;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        .ad {
+            grid-area: ad;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        header, nav, aside, main, footer {
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>grid-template shorthand</h1>
+    <p>Atalho para definir o grid-template-columns, grid-template-rows e grid-template-areas.</p>
+    <p>grid-template: 10% 5% auto 20% / auto auto auto.</p>
+    <section class="container area01">
+        <header>
+            Header
+        </header>
+        <nav>
+            Nav
+        </nav>
+        <aside>
+            Aside
+        </aside>
+        <main>
+            Main
+        </main>
+        <footer>
+            Footer
+        </footer>
+    </section>
+    <p>grid-template: max-content max-content auto max-content / 1fr 2fr 1fr.</p>
+    <section class="container area02">
+        <header>
+            Header
+        </header>
+        <nav>
+            Nav
+        </nav>
+        <aside>
+            Aside
+        </aside>
+        <main>
+            Main
+        </main>
+        <aside class="ad">
+            AD
+        </aside>
+        <footer>
+            Footer
+        </footer>
+    </section>
+    <p>grid-template: 1fr 1fr 5fr 2fr 2fr 1fr / auto.</p>
+    <section class="container mobile">
+        <header>
+            Header
+        </header>
+        <nav>
+            Nav
+        </nav>
+        <aside>
+            Aside
+        </aside>
+        <main>
+            Main
+        </main>
+        <aside class="ad">
+            AD
+        </aside>
+        <footer>
+            Footer
+        </footer>
+    </section>
+    <p>grid-template: 2fr 1fr 6fr 2fr / 1fr 2fr 1fr</p>
+    <section class="container vazio">
+        <header>
+            Header
+        </header>
+        <nav>
+            Nav
+        </nav>
+        <aside>
+            Aside
+        </aside>
+        <main>
+            Main
+        </main>
+        <aside class="ad">
+            AD
+        </aside>
+        <footer>
+            Footer
+        </footer>
+    </section>
+</body>
+</html>

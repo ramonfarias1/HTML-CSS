@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-template-areas</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            width: 500px;
+            height: 500px;
+            background-color: tomato;
+            border: 1px solid black;
+        }
+
+        p {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .area01 {
+            grid-template-areas: 
+                "header header header"
+                "nav nav nav"
+                "aside main main"
+                "footer footer footer";
+            gap: 1rem;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 10% 5% auto 20%;
+        }
+
+        .area02 {
+            grid-template-areas: 
+                "aside header header"
+                "aside nav ad"
+                "aside main ad"
+                "aside footer ad";
+            gap: 1rem;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: max-content max-content auto max-content;
+        }
+
+        .mobile {
+            grid-template-areas: 
+                "header"
+                "nav"
+                "main"
+                "aside"
+                "ad"
+                "footer";
+            gap: 1rem;
+            grid-template-columns: auto;
+            grid-template-rows: 1fr 1fr 5fr 2fr 2fr 1fr;
+        }
+
+        .vazio {
+            grid-template-areas: 
+                ". header ."
+                "aside nav ad"
+                "aside main ad"
+                ". footer .";
+            gap: 1rem;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 2fr 1fr 6fr 2fr;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        .ad {
+            grid-area: ad;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        header, nav, aside, main, footer {
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>grid-template-areas</h1>
+    <p>Define áreas específicas no grid. O ponto (.) pode ser utilizado para criar áreas vazias.</p>
+    <p>Exemplo 01.</p>
+    <section class="container area01">
+        <header>
+            Header
+        </header>
+        <nav>
+            Nav
+        </nav>
+        <aside>
+            Aside
+        </aside>
+        <main>
+            Main
+        </main>
+        <footer>
+            Footer
+        </footer>
+    </section>
+    <p>Exemplo 02.</p>
+    <section class="container area02">
+        <header>
+            Header
+        </header>
+        <nav>
+            Nav
+        </nav>
+        <aside>
+            Aside
+        </aside>
+        <main>
+            Main
+        </main>
+        <aside class="ad">
+            AD
+        </aside>
+        <footer>
+            Footer
+        </footer>
+    </section>
+    <p>Exemplo 03 (mobile).</p>
+    <section class="container mobile">
+        <header>
+            Header
+        </header>
+        <nav>
+            Nav
+        </nav>
+        <aside>
+            Aside
+        </aside>
+        <main>
+            Main
+        </main>
+        <aside class="ad">
+            AD
+        </aside>
+        <footer>
+            Footer
+        </footer>
+    </section>
+    <p>Exemplo 03 (usando (.) para criar áreas vazias).</p>
+    <section class="container vazio">
+        <header>
+            Header
+        </header>
+        <nav>
+            Nav
+        </nav>
+        <aside>
+            Aside
+        </aside>
+        <main>
+            Main
+        </main>
+        <aside class="ad">
+            AD
+        </aside>
+        <footer>
+            Footer
+        </footer>
+    </section>
+</body>
+</html>
