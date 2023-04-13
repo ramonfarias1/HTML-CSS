@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-column</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            max-width: 800px;
+            grid-template-columns: repeat(3, auto);
+            background-color: tomato;
+            border: 4px solid black;
+        }
+
+        .item {
+            background-color: cadetblue;
+            border: 3px solid black;
+            padding: 20px;
+            margin: 10px;
+            font: 2em bold;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .ex01 #item1 {
+            grid-column: 3;
+        }
+
+        .ex01 #item2 {
+            grid-column: 1;
+        }
+
+        .ex01 #item3 {
+            grid-column: 1;
+        }
+
+        .ex02 #item1 {
+            grid-column: 3/3;
+        }
+
+        .ex02 #item2 {
+            grid-column: 1/3;
+        }
+
+        .ex02 #item4 {
+            grid-column: 1/4;
+        }
+
+        .start-end #item1 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+        .start-end #item2, .start-end #item4 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .span #item1 {
+            grid-column: span 3;
+        }
+
+        .span #item6 {
+            grid-column: 1 / span 2;
+        }
+
+        .areas {
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 1fr 1fr 3fr 1fr;
+        }
+
+        .areas #header, .areas #nav, .areas #footer {
+            grid-column: span 3;
+        }
+    </style>
+</head>
+<body>
+    <h1>grid-column</h1>
+    <p>Define qual coluna será ocupada pelo grid item. É possível definir uma linha de início e final, assim o item irá ocupar múltiplas colunas.</p>
+    <p>grid-column: 1;</p>
+    <section class="container ex01">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+        <div class="item" id="item6">
+            6
+        </div>
+    </section>
+    <p>grid-column 1 / 3;</p>
+    <section class="container ex02">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+        <div class="item" id="item6">
+            6
+        </div>
+    </section>
+    <p>grid-column-start / grid-column-end</p>
+    <section class="container start-end">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+        <div class="item" id="item6">
+            6
+        </div>
+    </section>
+    <p>grid-column: span;</p>
+    <section class="container span">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+        <div class="item" id="item6">
+            6
+        </div>
+    </section>
+    <p>Criando grid-template-areas com grid-column</p>
+    <section class="container areas">
+        <div class="item" id="header">
+            header
+        </div>
+        <div class="item" id="nav">
+            nav
+        </div>
+        <div class="item" id="aside">
+            aside
+        </div>
+        <div class="item" id="main">
+            main
+        </div>
+        <div class="item" id="ads">
+            ads
+        </div>
+        <div class="item" id="footer">
+            footer
+        </div>
+    </section>
+</body>
+</html>

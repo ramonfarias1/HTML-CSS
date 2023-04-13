@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            max-width: 800px;
+            background-color: tomato;
+            border: 4px solid black;
+        }
+
+        .item {
+            background-color: cadetblue;
+            border: 3px solid black;
+            padding: 20px;
+            margin: 10px;
+            font: 2em bold;
+            text-align: center;
+        }
+
+        p, pre {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .grid1 {
+            grid: 100px 200px / 50px 100px;
+        }
+
+        .grid2 {
+            grid: 100px / auto-flow 150px 200px;
+        }
+
+        .grid3 {
+            grid: 
+                "header header"  max-content
+                "nav nav"        max-content
+                "aside main"     100px
+                "footer footer"  max-content
+
+                / 1fr 2fr ;
+
+                gap: 1rem;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+        
+        header, nav, aside, main, footer {
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>grid</h1>
+    <p>Atalho geral para definir o grid: grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns e grid-auto-flow</p>
+    <p>grid: 100px 200px / 50px 100px</p>
+    <section class="container grid1">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+    </section>
+    <p>grid: 100px / auto-flow 150px 200px</p>
+    <p>Gera uma linha com 100px de altura. O grid-auto-flow é definido como column (pois está logo antes da definição das colunas). Ele também define o grid-auto-columns com 100px 50px</p>
+    <section class="container grid2">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+    </section>
+    <p><pre>
+grid: "header header"   max-content
+        "nav nav"              max-content
+        "aside main"         100px
+        "footer footer"       max-content
+
+        / 1fr 2fr ;
+    </pre></p>
+    <section class="container grid3">
+        <header>
+            Header
+        </header>
+        <nav>
+            Nav
+        </nav>
+        <aside>
+            Aside
+        </aside>
+        <main>
+            Main
+        </main>
+        <footer>
+            Footer
+        </footer>
+    </section>
+</body>
+</html>

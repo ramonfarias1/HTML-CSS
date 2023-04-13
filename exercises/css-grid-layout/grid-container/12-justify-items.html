@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>justify-items</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            max-width: 800px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, auto);
+            background-color: tomato;
+            border: 4px solid black;
+        }
+
+        .item {
+            background-color: cadetblue;
+            border: 3px solid black;
+            padding: 20px;
+            margin: 10px;
+            font: 2em bold;
+            text-align: center;
+        }
+
+        #item2, #item3 {
+            grid-row: span 2;
+        }
+
+        #item5 {
+            grid-column: span 2;
+        }
+
+        p {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .stretch {
+            grid-template-columns: auto;
+            justify-items: stretch;
+        }
+
+        .start {
+            justify-items: start;
+        }
+
+        .end {
+            justify-items: end;
+        }
+
+        .center {
+            justify-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>justify-items</h1>
+    <p>Justifica o conteúdo dos itens do grid em relação ao eixo x (horizontal). Justifica em relação a célula.</p>
+    <p>justify-items: stretch; (estica os itens)</p>
+    <section class="container stretch">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+        <div class="item" id="item6">
+            6
+        </div>
+    </section>
+    <p>justify-items: start;</p>
+    <section class="container start">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+        <div class="item" id="item6">
+            6
+        </div>
+    </section>
+    <p>justify-items: end;</p>
+    <section class="container end">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+        <div class="item" id="item6">
+            6
+        </div>
+    </section>
+    <p>justify-items: center;</p>
+    <section class="container center">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+        <div class="item" id="item6">
+            6
+        </div>
+    </section>

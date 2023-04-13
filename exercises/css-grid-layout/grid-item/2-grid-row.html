@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-row</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            max-width: 800px;
+            grid-template-columns: repeat(3, auto);
+            background-color: tomato;
+            border: 4px solid black;
+        }
+
+        .item {
+            background-color: cadetblue;
+            border: 3px solid black;
+            padding: 20px;
+            margin: 10px;
+            font: 2em bold;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .ex01 #item1 {
+            grid-row: 4;
+        }
+
+        .ex02 #item1 {
+            grid-row: 1/4;
+        }
+
+        .start-end #item1 {
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+
+        .span #item1 {
+            grid-row: span 4;
+        }
+
+        .areas {
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 1fr 1fr 3fr 1fr;
+        }
+
+        .areas #header {
+            grid-column: span 3;
+        }
+
+        .areas #nav {
+            grid-column: 2 / span 2;
+        }
+
+        .areas #aside {
+            grid-row: 2 / 5;
+        }
+
+        .areas #footer {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>grid-row</h1>
+    <p>Define quais linhas serão ocupadas pelo grid item.</p>
+    <p>Atenção aqui, pois esse linha é referente a row. Porém as chamadas grid lines que por tradução também significam linhas do grid, são diferentes. Uma row (linha), possui sempre 2 grid lines (linhas do grid), uma no início dela e uma no final dela.</p>
+    <p>grid-row: 1;</p>
+    <section class="container ex01">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+        <div class="item" id="item6">
+            6
+        </div>
+    </section>
+    <p>grid-row: 1 / 4;</p>
+    <section class="container ex02">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+        <div class="item" id="item6">
+            6
+        </div>
+    </section>
+    <p>grid-row-start / grid-row-end</p>
+    <section class="container start-end">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+        <div class="item" id="item6">
+            6
+        </div>
+    </section>
+    <p>grid-row: span;</p>
+    <section class="container span">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+        <div class="item" id="item6">
+            6
+        </div>
+    </section>
+    <p>Criando grid-template-areas com grid-row</p>
+    <section class="container areas">
+        <div class="item" id="header">
+            header
+        </div>
+        <div class="item" id="nav">
+            nav
+        </div>
+        <div class="item" id="aside">
+            aside
+        </div>
+        <div class="item" id="main">
+            main
+        </div>
+        <div class="item" id="ads">
+            ads
+        </div>
+        <div class="item" id="footer">
+            footer
+        </div>
+    </section>
+</body>
+</html>

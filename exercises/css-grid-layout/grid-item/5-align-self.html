@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-self</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-rows: auto auto;
+            max-width: 1000px;
+            height: 800px;
+            background-color: tomato;
+            border: 4px solid black;
+        }
+
+        .item {
+            background-color: cadetblue;
+            border: 3px solid black;
+            padding: 20px;
+            margin: 10px;
+            font: 2em bold;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .stretch {
+            align-self: stretch;
+        }
+
+        .start {
+            align-self: start;
+        }
+
+        .end {
+            align-self: end;
+        }
+
+        .center {
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>align-self</h1>
+    <p>Justifica o item do grid em relação ao eixo y (vertical). Alinha em relação a célula.</p>
+    <p>align-self: stretch;</p>
+    <section class="container">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item stretch">
+            stretch
+        </div>
+        <div class="item stretch">
+            stretch
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+    </section>
+    <p>align-self: start;</p>
+    <section class="container">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item start">
+            start
+        </div>
+        <div class="item start">
+            start
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+    </section>
+    <p>align-self: end;</p>
+    <section class="container">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item end">
+            end
+        </div>
+        <div class="item end">
+            end
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+    </section>
+    <p>align-self: center;</p>
+    <section class="container">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item center">
+            center
+        </div>
+        <div class="item center">
+            center
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+    </section>
+</body>
+</html>

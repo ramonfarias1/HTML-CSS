@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-auto-flow</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            max-width: 1000px;
+            background-color: tomato;
+            border: 4px solid black;
+        }
+
+        .item {
+            background-color: cadetblue;
+            border: 3px solid black;
+            padding: 20px;
+            margin: 10px;
+            font: 2em bold;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .column {
+            grid-auto-flow: column;
+        }
+
+        .column2 {
+            grid-template-rows: 1fr 1fr;
+            grid-auto-flow: column;
+        }
+
+        .row {
+            grid-auto-flow: row;
+        }
+
+        .row2 {
+            grid-template-columns: 1fr 1fr;
+            grid-auto-flow: row;
+        }
+
+        .dense {
+            grid-template-columns: auto auto auto auto;
+            grid-auto-flow: dense;
+        }
+
+        .dense #item2 {
+            grid-column: span 4;
+        }
+
+        .dense #item4 {
+            grid-column: span 4;
+        }
+    </style>
+</head>
+<body>
+    <h1>grid-auto-flow</h1>
+    <p>Define o fluxo dos itens no grid. Se eles vão automaticamente gerar novas linhas ou colunas.</p>
+    <p>grid-auto-flow: column;</p>
+    <section class="container column">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+    </section>
+    <p>grid-auto-flow: column;</p>
+    <section class="container column2">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+    </section>
+    <p>grid-auto-flow: row;</p>
+    <section class="container row">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+    </section>
+    <p>grid-auto-flow: row;</p>
+    <section class="container row2">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+    </section>
+    <p>grid-auto-flow: dense;</p>
+    <section class="container dense">
+        <div class="item" id="item1">
+            1
+        </div>
+        <div class="item" id="item2">
+            2
+        </div>
+        <div class="item" id="item3">
+            3
+        </div>
+        <div class="item" id="item4">
+            4
+        </div>
+        <div class="item" id="item5">
+            5
+        </div>
+        <div class="item" id="item6">
+            6
+        </div>
+        <div class="item" id="item7">
+            7
+        </div>
+        <div class="item" id="item8">
+            8
+        </div>
+        <div class="item" id="item9">
+            9
+        </div>
+    </section>
+</body>
+</html>
